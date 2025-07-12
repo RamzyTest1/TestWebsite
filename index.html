@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramzy.Test - Header</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .top-banner {
+            background-color: #f8f9fa;
+            padding: 8px 0;
+            font-size: 13px;
+            color: #333;
+        }
+
+        .top-banner .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .checkmark {
+            color: #28a745;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .feature-text {
+            color: #666;
+        }
+
+        .feature-text strong {
+            color: #333;
+        }
+
+        .main-header {
+            background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .main-header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-link {
+            display: inline-block;
+            transition: opacity 0.3s;
+        }
+
+        .logo-link:hover {
+            opacity: 0.8;
+        }
+
+        .logo-image {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .logo-icon {
+            width: 20px;
+            height: 20px;
+            background-color: #1e3a5f;
+            border-radius: 2px;
+        }px;
+        }
+
+        .logo-icon {
+            width: 20px;
+            height: 20px;
+            background-color: #1e3a5f;
+            border-radius: 2px;
+        }
+
+        .categories-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .categories-btn {
+            background-color: #ff9500;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background-color 0.3s;
+        }
+
+        .categories-btn:hover {
+            background-color: #e8850f;
+        }
+
+        .categories-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border-radius: 4px;
+            min-width: 200px;
+            z-index: 1000;
+            display: none;
+        }
+
+        .categories-container:hover .categories-dropdown {
+            display: block;
+        }
+
+        .dropdown-item {
+            padding: 12px 16px;
+            color: #333;
+            text-decoration: none;
+            display: block;
+            border-bottom: 1px solid #eee;
+            transition: background-color 0.3s;
+            font-size: 14px;
+        }
+
+        .dropdown-item:hover {
+            background-color: #f8f9fa;
+            color: #ff9500;
+        }
+
+        .dropdown-item:last-child {
+            border-bottom: none;
+        }
+
+        .search-section {
+            flex: 1;
+            max-width: 400px;
+            position: relative;
+        }
+
+        .search-container {
+            display: flex;
+            background-color: white;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 12px 15px;
+            border: none;
+            outline: none;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .search-input::placeholder {
+            color: #999;
+        }
+
+        .search-btn {
+            background-color: #1e3a5f;
+            color: white;
+            padding: 12px 15px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .search-btn:hover {
+            background-color: #2c5282;
+        }
+
+        .contact-section {
+            text-align: right;
+            font-size: 14px;
+        }
+
+        .phone-number {
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 2px;
+        }
+
+        .email {
+            font-size: 12px;
+            opacity: 0.9;
+        }
+
+        .user-icon {
+            background-color: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .user-icon:hover {
+            background-color: rgba(255,255,255,0.2);
+        }
+
+        .nav-menu {
+            background-color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .nav-menu .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-link {
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #1e3a5f;
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-action {
+            color: #666;
+            text-decoration: none;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .add-to-cart-btn {
+            background-color: #1e3a5f;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #2c5282;
+        }
+
+        @media (max-width: 768px) {
+            .top-banner .container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .main-header .container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .search-section {
+                max-width: 100%;
+            }
+            
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Banner with Features -->
+    <div class="top-banner">
+        <div class="container">
+            <div class="feature-item">
+                <span class="checkmark">✓</span>
+                <span class="feature-text"><strong>Livraison gratuite</strong> des produits dans un rayon de 30 km autour de Salé.</span>
+            </div>
+            <div class="feature-item">
+                <span class="checkmark">✓</span>
+                <span class="feature-text"><strong>Articles de marques premium</strong> à un prix abordable.</span>
+            </div>
+            <div class="feature-item">
+                <span class="checkmark">✓</span>
+                <span class="feature-text"><strong>Retrait des produits</strong> directement depuis notre centre.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <div class="main-header">
+        <div class="container">
+            <div class="logo-section">
+                <a href="#" class="logo-link">
+                    <img src="C:\Users\l7waaaaaaaaaay\Desktop\qwerty-logo-png_seeklogo-114798.png" alt="Logo" class="logo-image">
+                </a>
+                <div class="categories-container">
+                    <button class="categories-btn">
+                        ☰ Toutes les catégories
+                        <span>▼</span>
+                    </button>
+                    <div class="categories-dropdown">
+                        <a href="#" class="dropdown-item">Ramzy</a>
+                        <a href="#" class="dropdown-item">Qwerty</a>
+                        <a href="#" class="dropdown-item">Hamza</a>
+                        <a href="#" class="dropdown-item">zbi</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="search-section">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="🔍 Rechercher 🔍 Accessoires pour faux plafonds">
+                    <button class="search-btn">
+                        🔍
+                    </button>
+                </div>
+            </div>
+
+            <div class="contact-section">
+                <div class="phone-number">+212 663 871 474</div>
+                <div class="email">contact@placomaroc.net</div>
+            </div>
+
+            <div class="user-icon">
+                👤
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="nav-menu">
+        <div class="container">
+            <div class="nav-links">
+                <a href="#" class="nav-link">ACCUEIL</a>
+                <a href="#" class="nav-link">À PROPOS</a>
+                <a href="#" class="nav-link">CONTACT</a>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="nav-action">♡ Wishlist</a>
+                <a href="#" class="nav-action">⚖ Comparer</a>
+                <button class="add-to-cart-btn">AJOUTER AU DEVIS</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add some interactivity
+        document.querySelector('.search-btn').addEventListener('click', function() {
+            const searchInput = document.querySelector('.search-input');
+            if (searchInput.value.trim()) {
+                alert('Recherche pour: ' + searchInput.value);
+            } else {
+                alert('Veuillez entrer un terme de recherche');
+            }
+        });
+
+        document.querySelector('.search-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                document.querySelector('.search-btn').click();
+            }
+        });
+    </script>
+</body>
+</html>
