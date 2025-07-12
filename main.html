@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ramzy.Test - Header</title>
+    <title>Qwerty Shop - متجر أدوات المعدات</title>
     <style>
         * {
             margin: 0;
@@ -12,181 +12,75 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
+            font-family: 'Arial', sans-serif;
+            direction: rtl;
         }
 
+        /* Top banner */
         .top-banner {
-            background-color: #f8f9fa;
+            background-color: #333;
+            color: white;
+            text-align: center;
             padding: 8px 0;
-            font-size: 13px;
-            color: #333;
-        }
-
-        .top-banner .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .feature-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .checkmark {
-            color: #28a745;
-            font-weight: bold;
             font-size: 14px;
         }
 
-        .feature-text {
-            color: #666;
-        }
-
-        .feature-text strong {
-            color: #333;
-        }
-
+        /* Main header */
         .main-header {
-            background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
-            color: white;
+            background: linear-gradient(135deg, #FFB800 0%, #FFA500 100%);
             padding: 15px 0;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        .main-header .container {
+        .header-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
+            justify-content: space-between;
+            padding: 0 20px;
         }
 
+        /* Logo section */
         .logo-section {
             display: flex;
             align-items: center;
             gap: 15px;
         }
 
-        .logo-link {
-            display: inline-block;
-            transition: opacity 0.3s;
-        }
-
-        .logo-link:hover {
-            opacity: 0.8;
-        }
-
-        .logo-image {
-            height: 40px;
-            width: auto;
-            object-fit: contain;
-        }
-
-        .logo-icon {
-            width: 20px;
-            height: 20px;
-            background-color: #1e3a5f;
-            border-radius: 2px;
-        }px;
-        }
-
-        .logo-icon {
-            width: 20px;
-            height: 20px;
-            background-color: #1e3a5f;
-            border-radius: 2px;
-        }
-
-        .categories-container {
-            position: relative;
-            display: inline-block;
-        }
-
-        .categories-btn {
-            background-color: #ff9500;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 14px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: background-color 0.3s;
-        }
-
-        .categories-btn:hover {
-            background-color: #e8850f;
-        }
-
-        .categories-dropdown {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: white;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            border-radius: 4px;
-            min-width: 200px;
-            z-index: 1000;
-            display: none;
-        }
-
-        .categories-container:hover .categories-dropdown {
-            display: block;
-        }
-
-        .dropdown-item {
-            padding: 12px 16px;
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
             color: #333;
             text-decoration: none;
-            display: block;
-            border-bottom: 1px solid #eee;
-            transition: background-color 0.3s;
+            letter-spacing: 1px;
+        }
+
+        .logo-subtitle {
             font-size: 14px;
+            color: #555;
+            margin-top: 2px;
         }
 
-        .dropdown-item:hover {
-            background-color: #f8f9fa;
-            color: #ff9500;
-        }
-
-        .dropdown-item:last-child {
-            border-bottom: none;
-        }
-
+        /* Search section */
         .search-section {
             flex: 1;
             max-width: 400px;
-            position: relative;
-        }
-
-        .search-container {
+            margin: 0 30px;
             display: flex;
-            background-color: white;
-            border-radius: 4px;
-            overflow: hidden;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            align-items: center;
+            gap: 10px;
         }
 
         .search-input {
             flex: 1;
             padding: 12px 15px;
             border: none;
-            outline: none;
+            border-radius: 25px;
             font-size: 14px;
-            color: #333;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            outline: none;
+            text-align: right;
         }
 
         .search-input::placeholder {
@@ -194,227 +88,258 @@
         }
 
         .search-btn {
-            background-color: #1e3a5f;
+            background-color: #FF6B35;
             color: white;
-            padding: 12px 15px;
             border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
             cursor: pointer;
+            font-size: 16px;
+            font-weight: 900;
+            font-family: 'Arial Black', Arial, sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             transition: background-color 0.3s;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         }
 
         .search-btn:hover {
-            background-color: #2c5282;
+            background-color: #E55A2B;
         }
 
-        .contact-section {
-            text-align: right;
-            font-size: 14px;
-        }
-
-        .phone-number {
-            font-weight: bold;
-            font-size: 16px;
-            margin-bottom: 2px;
-        }
-
-        .email {
-            font-size: 12px;
-            opacity: 0.9;
-        }
-
-        .user-icon {
-            background-color: rgba(255,255,255,0.1);
-            border: 1px solid rgba(255,255,255,0.3);
-            border-radius: 50%;
-            width: 35px;
-            height: 35px;
+        /* User section */
+        .user-section {
             display: flex;
             align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: background-color 0.3s;
+            gap: 20px;
         }
 
-        .user-icon:hover {
-            background-color: rgba(255,255,255,0.2);
-        }
-
-        .nav-menu {
-            background-color: white;
-            padding: 15px 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .nav-menu .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+        .user-account {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-        }
-
-        .nav-link {
+            gap: 8px;
             color: #333;
             text-decoration: none;
             font-size: 14px;
-            font-weight: 500;
-            transition: color 0.3s;
         }
 
-        .nav-link:hover {
-            color: #1e3a5f;
-        }
-
-        .nav-actions {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-        }
-
-        .nav-action {
-            color: #666;
-            text-decoration: none;
-            font-size: 14px;
+        .user-icon, .heart-icon, .cart-icon {
+            width: 24px;
+            height: 24px;
             display: flex;
             align-items: center;
-            gap: 5px;
-        }
-
-        .add-to-cart-btn {
-            background-color: #1e3a5f;
-            color: white;
-            padding: 8px 16px;
-            border: none;
-            border-radius: 4px;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.3);
+            color: #333;
             cursor: pointer;
-            font-size: 14px;
             transition: background-color 0.3s;
         }
 
-        .add-to-cart-btn:hover {
-            background-color: #2c5282;
+        .user-icon:hover, .heart-icon:hover, .cart-icon:hover {
+            background-color: rgba(255,255,255,0.5);
         }
 
+        .cart-badge {
+            background-color: #FF6B35;
+            color: white;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            position: relative;
+            top: -10px;
+            right: -10px;
+        }
+
+        /* Navigation */
+        .navigation {
+            background-color: white;
+            border-top: 1px solid #eee;
+            padding: 15px 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            color: #333;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 900;
+            font-family: 'Arial Black', Arial, sans-serif;
+            transition: all 0.3s ease;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            letter-spacing: 0.5px;
+            padding: 10px 15px;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-menu a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, #FF6B35, #FFB800);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+            z-index: -1;
+        }
+
+        .nav-menu a:hover::before {
+            transform: scaleX(1);
+        }
+
+        .nav-menu a:hover {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            transform: translateY(-2px);
+        }
+
+        .nav-menu a:hover {
+            color: #FF6B35;
+        }
+
+        .contact-info {
+            color: #333;
+            font-size: 16px;
+            font-weight: 900;
+            font-family: 'Arial Black', Arial, sans-serif;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            letter-spacing: 0.5px;
+            padding: 10px 15px;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .contact-info::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, #FF6B35, #FFB800);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+            z-index: -1;
+        }
+
+        .contact-info:hover::before {
+            transform: scaleX(1);
+        }
+
+        .contact-info:hover {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            transform: translateY(-2px);
+        }
+
+        /* Icons */
+        .icon {
+            font-size: 16px;
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
-            .top-banner .container {
+            .header-container {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            .search-section {
+                order: 3;
+                width: 100%;
+                margin: 0;
+            }
+
+            .nav-menu {
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .nav-container {
                 flex-direction: column;
                 gap: 10px;
             }
-            
-            .main-header .container {
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            .search-section {
-                max-width: 100%;
-            }
-            
-            .nav-links {
-                flex-wrap: wrap;
-                gap: 15px;
+
+            .contact-info {
+                order: 2;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Top Banner with Features -->
+    <!-- Top Banner -->
     <div class="top-banner">
-        <div class="container">
-            <div class="feature-item">
-                <span class="checkmark">✓</span>
-                <span class="feature-text"><strong>Livraison gratuite</strong> des produits dans un rayon de 30 km autour de Salé.</span>
-            </div>
-            <div class="feature-item">
-                <span class="checkmark">✓</span>
-                <span class="feature-text"><strong>Articles de marques premium</strong> à un prix abordable.</span>
-            </div>
-            <div class="feature-item">
-                <span class="checkmark">✓</span>
-                <span class="feature-text"><strong>Retrait des produits</strong> directement depuis notre centre.</span>
-            </div>
-        </div>
+        شحن مجاني على جميع الطلبات في الدار البيضاء
     </div>
 
     <!-- Main Header -->
-    <div class="main-header">
-        <div class="container">
+    <header class="main-header">
+        <div class="header-container">
+            <!-- Logo Section -->
             <div class="logo-section">
-                <a href="#" class="logo-link">
-                    <img src="C:\Users\l7waaaaaaaaaay\Desktop\qwerty-logo-png_seeklogo-114798.png" alt="Logo" class="logo-image">
-                </a>
-                <div class="categories-container">
-                    <button class="categories-btn">
-                        ☰ Toutes les catégories
-                        <span>▼</span>
-                    </button>
-                    <div class="categories-dropdown">
-                        <a href="#" class="dropdown-item">Ramzy</a>
-                        <a href="#" class="dropdown-item">Qwerty</a>
-                        <a href="#" class="dropdown-item">Hamza</a>
-                        <a href="#" class="dropdown-item">zbi</a>
-                    </div>
+                <div>
+                    <a href="#" class="logo">Qwerty Shop</a>
+                    <div class="logo-subtitle">متجر أدوات المعدات</div>
                 </div>
             </div>
 
+            <!-- Search Section -->
             <div class="search-section">
-                <div class="search-container">
-                    <input type="text" class="search-input" placeholder="🔍 Rechercher 🔍 Accessoires pour faux plafonds">
-                    <button class="search-btn">
-                        🔍
-                    </button>
-                </div>
+                <input type="text" class="search-input" placeholder="البحث عن المنتجات...">
+                <button class="search-btn">بحث</button>
             </div>
 
-            <div class="contact-section">
-                <div class="phone-number">+212 663 871 474</div>
-                <div class="email">contact@placomaroc.net</div>
-            </div>
-
-            <div class="user-icon">
-                👤
+            <!-- User Section -->
+            <div class="user-section">
             </div>
         </div>
-    </div>
+    </header>
 
-    <!-- Navigation Menu -->
-    <div class="nav-menu">
-        <div class="container">
-            <div class="nav-links">
-                <a href="#" class="nav-link">ACCUEIL</a>
-                <a href="#" class="nav-link">À PROPOS</a>
-                <a href="#" class="nav-link">CONTACT</a>
-            </div>
-            <div class="nav-actions">
-                <a href="#" class="nav-action">♡ Wishlist</a>
-                <a href="#" class="nav-action">⚖ Comparer</a>
-                <button class="add-to-cart-btn">AJOUTER AU DEVIS</button>
+    <!-- Navigation -->
+    <nav class="navigation">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="#">الرئيسية</a></li>
+                <li><a href="#">المتجر</a></li>
+                <li><a href="#">المدونة</a></li>
+                <li><a href="#">الوسائط</a></li>
+                <li><a href="#">الرمز المختصر</a></li>
+                <li><a href="#">الصفحات</a></li>
+                <li><a href="#">من نحن</a></li>
+                <li><a href="#">اتصل بنا</a></li>
+            </ul>
+            
+            <div class="contact-info">
+                اتصل بنا: +212 000 000 000
             </div>
         </div>
-    </div>
-
-    <script>
-        // Add some interactivity
-        document.querySelector('.search-btn').addEventListener('click', function() {
-            const searchInput = document.querySelector('.search-input');
-            if (searchInput.value.trim()) {
-                alert('Recherche pour: ' + searchInput.value);
-            } else {
-                alert('Veuillez entrer un terme de recherche');
-            }
-        });
-
-        document.querySelector('.search-input').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                document.querySelector('.search-btn').click();
-            }
-        });
-    </script>
+    </nav>
 </body>
 </html>
